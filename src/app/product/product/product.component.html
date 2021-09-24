@@ -8,6 +8,7 @@
     <th scope="col">tên</th>
     <th scope="col">ảnh</th>
     <th scope="col">giá</th>
+    <th scope="col">status</th>
   </tr>
   </thead>
   <tbody>
@@ -16,6 +17,8 @@
     <td>{{p.name}}</td>
     <td><img src="{{p.img}}" width="300" height="200"></td>
     <td>{{p.price}}</td>
+    <td *ngIf="p.status == true">còn hàng</td>
+    <td *ngIf="p.status == false">hết hàng</td>
     <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalchien" (click)="showProduct(p.name)">edit</button></td>
     <td><button type="button" class="btn btn-primary" (click)="deleteProduct(p.name)">delete</button></td>
   </tr>

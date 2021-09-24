@@ -1,0 +1,16 @@
+
+      <div class="card-group">
+        <div class="card" *ngFor="let p of products">
+          <img src="{{p.img}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{p.name}}</h5>
+            <p class="card-text">{{p.price}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted" *ngIf="p.status == true">còn hàng</small>
+            <small class="text-muted" *ngIf="p.status == false">hết hàng</small>
+          </div>
+        </div>
+      </div>
+
+
